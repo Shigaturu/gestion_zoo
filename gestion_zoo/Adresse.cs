@@ -22,7 +22,7 @@ namespace gestion_zoo
 
         public void AfficherAdresse()
         {
-            Console.WriteLine($"Adresse : {Rue} ' ' {Ville} ' ' {CodePostal}  ");
+            Console.WriteLine($"Adresse : {Rue}  {Ville}  {CodePostal}  ");
         }
 
 

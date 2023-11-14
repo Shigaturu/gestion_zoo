@@ -22,7 +22,7 @@ namespace gestion_zoo
 
         public void AfficherInfos()
         {
-            Console.WriteLine($" Nom : {Nom}, Age : {Age} ");
+            Console.WriteLine($"Nom : {Nom}, Age : {Age} ans ");
             Adresse.AfficherAdresse();
         }
 

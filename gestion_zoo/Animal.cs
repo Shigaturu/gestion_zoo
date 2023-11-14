@@ -25,7 +25,7 @@ namespace gestion_zoo
 
         public void AfficherDetails()
         {
-            Console.WriteLine("Nom : " + Nom + "\nEspece : " + Espece);
+            Console.WriteLine("Nom : " + Nom + "\nEspece : " + Espece + "\nAge : " + Age + " ans" +  "\nTaille : " + Taille + " cm" + "\nPoids : " + Poids + " kg" + "\n" );
         }
 
         public void Manger()

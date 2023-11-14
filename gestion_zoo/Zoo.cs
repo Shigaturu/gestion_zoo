@@ -33,7 +33,7 @@ namespace gestion_zoo
 
             foreach (Employe employe in ListEmploye)
             {
-                Console.WriteLine($"Nom: {employe.Nom} | Age: {employe.Age}");
+                employe.AfficherInfos();
             }
         }
 
@@ -43,7 +43,7 @@ namespace gestion_zoo
 
             foreach (Animal animal in ListAnimal)
             {
-                Console.WriteLine($"Nom: {animal.Nom}, Age: {animal.Age}");
+                animal.AfficherDetails();
             }
 
 
