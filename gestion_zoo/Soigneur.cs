@@ -6,27 +6,24 @@ using System.Threading.Tasks;
 
 namespace gestion_zoo
 {
-    // Composition
-    public class Employe
+    public class Soigneur : Employe
     {
-        public string Nom { get; set; }
-        public int Age { get; set; }
-        public Adresse Adresse { get; set; }
-
-        public Employe(string nom, int age, Adresse adresse)
+        public Soigneur(string nom, int age, Adresse adresse) : base(nom, age, adresse)
         {
             Nom = nom;
             Age = age;
             Adresse = adresse;
         }
-
+        
         public void AfficherInfos()
         {
             Console.WriteLine($" Nom : {Nom}, Age : {Age} ");
             Adresse.AfficherAdresse();
         }
 
-
-
+        public void Nourrir(Animal nom)
+        {
+            Console.WriteLine(this.Nom + " nourrit " + nom);
+        }
     }
 }

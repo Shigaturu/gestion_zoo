@@ -30,7 +30,12 @@ namespace gestion_zoo
 
         public void Manger()
         {
+            Console.WriteLine(this.Nom + " se pète le bide au Tacos du coin");
+        }
 
+        public void DemandeAjoutUser()
+        {
+            Console.WriteLine("");
         }
     }
 }
