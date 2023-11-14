@@ -9,20 +9,25 @@ namespace gestion_zoo
     // Composition
     public class Employe
     {
+        #region Propriétés
         public string Nom { get; set; }
         public int Age { get; set; }
         public Adresse Adresse { get; set; }
+        #endregion
 
+        #region Constructeur
         public Employe(string nom, int age, Adresse adresse)
         {
             Nom = nom;
             Age = age;
             Adresse = adresse;
         }
+        #endregion
 
+        #region Méthodes
         public void AfficherInfos()
         {
-            Console.WriteLine($" Nom : {Nom}, Age : {Age} ");
+            Console.WriteLine($"Nom : {Nom}, Age : {Age} ans ");
             Adresse.AfficherAdresse();
         }
 
@@ -45,7 +50,7 @@ namespace gestion_zoo
 
             return new Employe(nom, age, adresse);
         }
+        #endregion
     }
 
 }
-

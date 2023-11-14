@@ -8,13 +8,16 @@ namespace gestion_zoo
 {
     public class Soigneur : Employe
     {
+        #region Constructeur
         public Soigneur(string nom, int age, Adresse adresse) : base(nom, age, adresse)
         {
             Nom = nom;
             Age = age;
             Adresse = adresse;
         }
-        
+        #endregion
+
+        #region Méthodes
         public void AfficherInfos()
         {
             Console.WriteLine($" Nom : {Nom}, Age : {Age} ");
@@ -25,5 +28,6 @@ namespace gestion_zoo
         {
             Console.WriteLine(this.Nom + " nourrit " + nom);
         }
+        #endregion
     }
 }

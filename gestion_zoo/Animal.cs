@@ -8,12 +8,15 @@ namespace gestion_zoo
 {
     public class Animal
     {
+        #region Propriétés
         public string Nom { get; set; }
         public string Espece { get; set; }
         public int Age { get; set; }
         public decimal Taille { get; set; }
         public decimal Poids { get; set; }
+        #endregion
 
+        #region Constructeur
         public Animal(string nom, string espece, int age, decimal taille, decimal poids)
         {
             Nom = nom;
@@ -22,20 +25,17 @@ namespace gestion_zoo
             Taille = taille;
             Poids = poids;
         }
+        #endregion
 
+        #region Méthodes
         public void AfficherDetails()
         {
-            Console.WriteLine("Nom : " + Nom + "\nEspece : " + Espece);
+            Console.WriteLine("Nom : " + Nom + "\nEspece : " + Espece + "\nAge : " + Age + " ans" + "\nTaille : " + Taille + " cm" + "\nPoids : " + Poids + " kg" + "\n");
         }
 
         public void Manger()
         {
             Console.WriteLine(this.Nom + " se pète le bide au Tacos du coin");
-        }
-
-        public void DemandeAjoutUser()
-        {
-            Console.WriteLine("");
         }
 
         public static Animal CreerAnimalDepuisConsole()
@@ -71,6 +71,6 @@ namespace gestion_zoo
 
             return new Animal(nom, espece, age, taille, poids);
         }
+        #endregion
     }
 }
-

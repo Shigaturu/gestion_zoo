@@ -8,32 +8,39 @@ namespace gestion_zoo
 {
     public class Zoo
     {
+        #region Propriétés
         public string Nom { get; set; }
         public Adresse Adresse { get; set; }
         public Animal Animal { get; set; }
         public Employe Employe { get; set; }
 
         public List<Employe> ListEmploye = new List<Employe>();
-        public List<Animal> ListAnimal = new List<Animal>();
 
-        public Zoo(string nom, Adresse adresse) 
+        public List<Animal> ListAnimal = new List<Animal>();
+        #endregion
+
+        #region Constructeur
+        public Zoo(string nom, Adresse adresse)
         {
             Nom = nom;
             Adresse = adresse;
         }
+        #endregion
+
+        #region Méthodes
         public void AfficherInfo()
         {
             Console.WriteLine("\nAFFICHAGE DES INFORMATIONS DU ZOO");
             Console.WriteLine($"Nom du zoo : {Nom}");
         }
 
-        public void AfficherEmploye() 
+        public void AfficherEmploye()
         {
             Console.WriteLine("\nAFFICHAGE DES EMPLOYES");
 
             foreach (Employe employe in ListEmploye)
             {
-                Console.WriteLine($"Nom: {employe.Nom} | Age: {employe.Age}");
+                employe.AfficherInfos();
             }
         }
 
@@ -43,10 +50,8 @@ namespace gestion_zoo
 
             foreach (Animal animal in ListAnimal)
             {
-                Console.WriteLine($"Nom: {animal.Nom}, Age: {animal.Age}");
+                animal.AfficherDetails();
             }
-
-
 
         }
         public void CreerEmployeDepuisConsole()
@@ -83,6 +88,7 @@ namespace gestion_zoo
                 Console.WriteLine("Erreur lors de la création de l'animal.");
             }
         }
+        #endregion
 
     }
 }

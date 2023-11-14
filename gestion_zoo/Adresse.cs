@@ -9,20 +9,25 @@ namespace gestion_zoo
 {
     public class Adresse
     {
+        #region Propriétés
         public string Rue { get; set; }
         public string Ville { get; set; }
         public string CodePostal { get; set; }
+        #endregion
 
+        #region Constructeur
         public Adresse(string rue, string ville, string codepostal)
         {
             Rue = rue;
             Ville = ville;
             CodePostal = codepostal;
         }
+        #endregion
 
+        #region Méthodes
         public void AfficherAdresse()
         {
-            Console.WriteLine($"Adresse : {Rue} ' ' {Ville} ' ' {CodePostal}  ");
+            Console.WriteLine($"Adresse : {Rue} {Ville} {CodePostal}  ");
         }
 
 
@@ -46,7 +51,7 @@ namespace gestion_zoo
             } while (!EstCodePostalValide(codePostal));
 
 
-            return new Adresse (rue, ville, codePostal);
+            return new Adresse(rue, ville, codePostal);
         }
         private static bool EstCodePostalValide(string codePostal)
         {
@@ -54,5 +59,6 @@ namespace gestion_zoo
             string pattern = @"^\d{5}$";
             return Regex.IsMatch(codePostal, pattern);
         }
+        #endregion
     }
 }
