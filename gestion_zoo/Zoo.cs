@@ -45,6 +45,44 @@ namespace gestion_zoo
             {
                 Console.WriteLine($"Nom: {animal.Nom}, Age: {animal.Age}");
             }
+
+
+
         }
+        public void CreerEmployeDepuisConsole()
+        {
+            Console.WriteLine("Création d'un nouvel employé");
+
+            Employe nouvelEmploye = Employe.CreerEmployeDepuisConsole();
+
+            if (nouvelEmploye != null)
+            {
+                ListEmploye.Add(nouvelEmploye);
+                Console.WriteLine("Employé ajouté avec succès !");
+            }
+            else
+            {
+                Console.WriteLine("Erreur lors de la création de l'employé.");
+            }
+        }
+
+
+        public void CreerAnimalDepuisConsole()
+        {
+            Console.WriteLine("Création d'un nouvel animal");
+
+            Animal nouvelAnimal = Animal.CreerAnimalDepuisConsole();
+
+            if (nouvelAnimal != null)
+            {
+                ListAnimal.Add(nouvelAnimal);
+                Console.WriteLine("Animal ajouté avec succès !");
+            }
+            else
+            {
+                Console.WriteLine("Erreur lors de la création de l'animal.");
+            }
+        }
+
     }
 }

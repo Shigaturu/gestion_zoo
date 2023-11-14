@@ -27,6 +27,25 @@ namespace gestion_zoo
         }
 
 
+        public static Employe CreerEmployeDepuisConsole()
+        {
 
+            Console.Write("Nom : ");
+            string nom = Console.ReadLine();
+
+            Console.Write("Age : ");
+            if (!int.TryParse(Console.ReadLine(), out int age))
+            {
+                Console.WriteLine("Saisie incorrecte pour l'âge.");
+                return null;
+            }
+
+            Console.WriteLine("Adresse :");
+            Adresse adresse = Adresse.CreerAdresseDepuisConsole();
+
+            return new Employe(nom, age, adresse);
+        }
     }
+
 }
+

@@ -13,7 +13,7 @@ bool continueCalcul = true;
 
 do
 {
-    Console.WriteLine("\n[1] Afficher la liste d'employés\n[2] Afficher la liste d'animaux\n[3] Afficher les informations du zoo\n[N] Autre pour quitter");
+    Console.WriteLine("\n[1] Afficher la liste d'employés\n[2] Afficher la liste d'animaux\n[3] Afficher les informations du zoo\n[4] Ajouter un nouvel employé\n[5] Ajouter un nouvel animal\n[N] Autre pour quitter");
     string reponseContinue = Console.ReadLine();
 
     // Votre logique précédente avec le switch
@@ -29,6 +29,12 @@ do
 
         case "3":
             leZoo.AfficherInfo();
+            break;
+        case "4":
+            leZoo.CreerEmployeDepuisConsole();
+            break;
+        case "5":
+            leZoo.CreerAnimalDepuisConsole();
             break;
 
         case "N":

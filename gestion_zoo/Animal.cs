@@ -37,5 +37,40 @@ namespace gestion_zoo
         {
             Console.WriteLine("");
         }
+
+        public static Animal CreerAnimalDepuisConsole()
+        {
+
+            Console.Write("Nom : ");
+            string nom = Console.ReadLine();
+
+            Console.Write("Espece : ");
+            string espece = Console.ReadLine();
+
+            Console.Write("Age : ");
+            if (!int.TryParse(Console.ReadLine(), out int age))
+            {
+                Console.WriteLine("Saisie incorrecte pour l'âge.");
+                return null;
+            }
+
+            Console.Write("Taille en cm : ");
+            if (!decimal.TryParse(Console.ReadLine(), out decimal taille))
+            {
+                Console.WriteLine("Saisie incorrecte pour la taille.");
+                return null;
+            }
+
+            Console.Write("Poids en kg : ");
+            if (!decimal.TryParse(Console.ReadLine(), out decimal poids))
+            {
+                Console.WriteLine("Saisie incorrecte pour le poids.");
+                return null;
+            }
+
+
+            return new Animal(nom, espece, age, taille, poids);
+        }
     }
 }
+
