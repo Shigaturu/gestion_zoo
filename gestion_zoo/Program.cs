@@ -5,8 +5,8 @@
 Adresse uneAdresse = new Adresse("23 rue", "Tls", "31400");
 Zoo leZoo = new Zoo("Zoo tah les fous", uneAdresse);
 
-Animal hector = new Animal("Hector", "Chien", 8, 60, 20);
-Animal rox = new Animal("Rox", "Chat", 4, 30, 5);
+Loup hector = new Loup("Hector", "Chien", 8, 60, 20, 'M');
+Lion rox = new Lion("Rox", "Lion", 4, 30, 5,'M');
 leZoo.ListAnimal.Add(hector);
 leZoo.ListAnimal.Add(rox);
 
